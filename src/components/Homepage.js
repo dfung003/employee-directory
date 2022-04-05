@@ -2,12 +2,12 @@ import Header from "./Header";
 import Search from "./SearchBar";
 import PokemonList from "./PokemonList";
 
-export default function Home() {
+export default function Home(props) {
     return (
         <>
             <Header title="Pokédex" />
             <Search />
-            <PokemonList />
+            <PokemonList infoLoader={props.infoLoader} />
         </>
     );
 }
